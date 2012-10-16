@@ -48,21 +48,6 @@ double quart( double a, double b, double c, double d )
     return 0.;
 }
 
-int quadr( double a, double b, double c, double *x1, double *x2 )
-{
-    double d;
-    d = b*b - 4.0*a*c;
-    if( d >= 0 ) {
-        d = sqrt( d );
-        *x1 = ( - b - d )/( 2.0*a );
-        *x2 = ( - b + d )/( 2.0*a );
-        return ROOT_FOUND;
-    }
-    else {
-        return D_IS_NEGATIVE;
-    }
-}
-
 double cubic( double a, double b, double c, double d )
 {
     double D, q, r;
@@ -108,4 +93,19 @@ double cubic( double a, double b, double c, double d )
     x2 = -b + q * cos( ( D + 2.0*M_PI )/3.0 );
     x3 = -b + q * cos( ( D + 4.0*M_PI )/3.0 );
     return ( ( x1>0 )? x1 : ( ( x2>0 )? x2 : x3 ) );
+}
+
+int quadr( double a, double b, double c, double *x1, double *x2 )
+{
+    double d;
+    d = b*b - 4.0*a*c;
+    if( d >= 0 ) {
+        d = sqrt( d );
+        *x1 = ( - b - d )/( 2.0*a );
+        *x2 = ( - b + d )/( 2.0*a );
+        return ROOT_FOUND;
+    }
+    else {
+        return D_IS_NEGATIVE;
+    }
 }
