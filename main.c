@@ -22,11 +22,6 @@ int main(int argc, char *argv[])
     d = 5/584.0;
     quart( a, b, c, d );
     printf( "\n=============================\n" );
-    a = 4;
-    b = -4;
-    c = -20;
-    d = -5;
-    quart( a, b, c, d );
     getch();
     return 0;
 }
