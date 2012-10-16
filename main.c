@@ -114,3 +114,4 @@ double cubic( double a, double b, double c, double d )
     x3 = -b + q * cos( ( D + 4.0*M_PI )/3.0 );
     return ( ( x1>0 )? x1 : ( ( x2>0 )? x2 : x3 ) );
 }
+
