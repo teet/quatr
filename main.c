@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     getch();
     return 0;
 }
-
+// решение уравнения 4й степени
 double quart( double a, double b, double c, double d )
 {
     double p, q, r;
@@ -38,6 +38,7 @@ double quart( double a, double b, double c, double d )
     p = b - 3.0*a*a/8.0;
     q = a*a*a/8.0 - a*b/2.0 + c;
     r = -3*a*a*a*a/256.0 + a*a*b/16.0 - c*a/4.0 + d;
+    // преаброзуем к виду
     // y^4 + py^2 + qy + r = 0;
     // 2s^3 - ps^2 - 2rs + rp - q^2/4 = 0;
     // s^3 - (p/2)s^2 - rs + ( rp/2 - q^2/8 ) = 0;
