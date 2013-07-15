@@ -11,7 +11,7 @@ double cubic( double, double, double, double );
 int quadr( double, double, double, double *, double * );
 
 
-int main(int argc, char *argv[])
+int main( int argc, char *argv[] )
 {
     // x^4 + ax^3 + bx^2 + cx + d = 0
     double a, b, c, d;
@@ -30,7 +30,14 @@ int main(int argc, char *argv[])
     getch();
     return 0;
 }
-// решение уравнения 4й степени
+/**
+ * @fn функция вычисления корня уравнения 4-й степени.
+ *
+ * @param double a
+ * @param double b
+ * @param double c
+ * @param double d
+ */
 double quart( double a, double b, double c, double d )
 {
     double p, q, r;
